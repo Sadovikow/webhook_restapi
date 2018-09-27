@@ -32,15 +32,15 @@ class CRestApi {
             // REST Api
         	$queryData = http_build_query(array( // Передаем данные
         		'fields' => array(
-            		'TITLE' => $arFields["NAME"].' (www.rarusweb.ru) '.$sourсe,
-            		'NAME' => $arFields["PROPERTY_VALUES"]["FIO"],
-            		'PHONE' => array(array("VALUE" => preg_replace("/[^,.0-9]/", '', $arFields["PROPERTY_VALUES"]["PHONE"]), "VALUE_TYPE" => "WORK" )),
+                    'TITLE' => $arFields["NAME"].' (www.rarusweb.ru) '.$sourсe,
+                    'NAME' => $arFields["PROPERTY_VALUES"]["FIO"],
+                    'PHONE' => array(array("VALUE" => preg_replace("/[^,.0-9]/", '', $arFields["PROPERTY_VALUES"]["PHONE"]), "VALUE_TYPE" => "WORK" )),
                     'PHONE_WORK' => preg_replace("/[^,.0-9]/", '', $arFields["PROPERTY_VALUES"]["PHONE"]),
-            		'EMAIL' => array(array("VALUE" => $arFields["PROPERTY_VALUES"]["EMAIL"], "VALUE_TYPE" => "WORK" )),
+                    'EMAIL' => array(array("VALUE" => $arFields["PROPERTY_VALUES"]["EMAIL"], "VALUE_TYPE" => "WORK" )),
                     'EMAIL_WORK' => $arFields["PROPERTY_VALUES"]["EMAIL"],
-            		'COMMENTS' =>  $arFields["PROPERTY_VALUES"]["PHONE"].' '.$arFields["PROPERTY_VALUES"]["EMAIL"].'<br>Лид сгенерирован автоматически. Источник: rarusweb.ru.<br> '.$arFields["PROPERTY_VALUES"]["COMMENT"],
-            		'SOURCE_ID' => 'WEB',
-            		//'ASSIGNED_BY_ID ' => 7,
+                    'COMMENTS' =>  $arFields["PROPERTY_VALUES"]["PHONE"].' '.$arFields["PROPERTY_VALUES"]["EMAIL"].'<br>Лид сгенерирован автоматически. Источник: rarusweb.ru.<br> '.$arFields["PROPERTY_VALUES"]["COMMENT"],
+                    'SOURCE_ID' => 'WEB',
+                    //'ASSIGNED_BY_ID ' => 7,
         		)
         	));
 
