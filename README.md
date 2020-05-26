@@ -61,3 +61,5 @@ class CRestApi {
 ```
 **$queryUrl** - Обращаемся к вебхуку по методу crm.lead.add в формате JSON
 **$queryData** - Массив передаваемых данных
+
+Смотрите более подробную статью <a href="https://www.redsgroup.ru/workshop/integration/bitrix24_restapi/" title="Битрикс24 REST API">Здесь</a>
